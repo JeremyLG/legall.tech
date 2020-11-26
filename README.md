@@ -23,4 +23,21 @@
 
 My personal website based on the Python library **mkdocs**, GitHub Actions and Netlify.
 
-![Build Docs](https://github.com/JeremyLG/legall.tech/workflows/Build%20Docs/badge.svg?branch=master)
+## Technical Stack
+* Python 3.9
+    * Poetry for project management
+    * MkDocs for website generation
+* GitHub Actions
+* Netlify
+
+## Project layout
+    .github         # The actions and workflows directory
+    docs/
+        index.md    # The documentation homepage.
+        ...         # Other markdown pages, images and other files.
+    scripts         # The additional scripts directory.
+    .gitignore      # The files and directories to be ignored by Git
+    mkdocs.yml      # The MkDocs configuration file.
+    poetry.lock     # The automatically generated lock file from Poetry config.
+    pyproject.toml  # The Poetry configuration file of the global project.
+    README.md       # The project description file.

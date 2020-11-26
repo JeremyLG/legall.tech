@@ -6,9 +6,6 @@ authors = ["JeremyLG <jeremy.le-gall@hotmail.fr>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-PyYAML = "^5.3.1"
-Jinja2 = "^2.11.2"
-typer = "^0.3.2"
 mkdocs-material = "^6.1.6"
 
 [tool.poetry.dev-dependencies]

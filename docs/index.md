@@ -1,17 +1,5 @@
-# Welcome to MkDocs
+# Welcome to my personal website
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Issouuuuuu
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+<a href="https://stackoverflow.com/users/6434448/tricky"><img src="https://stackoverflow.com/users/flair/6434448.png" width="208" height="58" alt="profile for tricky at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for tricky at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>

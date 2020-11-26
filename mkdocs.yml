@@ -1,4 +1,4 @@
-site_name: LeGall
+site_name: Jérémy Le Gall
 site_description: My personal website
 site_url: https://legall.tech/
 theme:
@@ -29,5 +29,19 @@ repo_url: https://github.com/JeremyLG/legall.tech
 edit_uri: ''
 plugins:
 - search
+google_analytics:
+  - UA-254205131-X
+  - auto
 nav:
-- LeGall: index.md
+- About myself: index.md
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/jeremylg
+    - icon: fontawesome/brands/github
+      link: https://github.com/JeremyLG
+    - icon: fontawesome/brands/stack-overflow
+      link: https://stackoverflow.com/users/6434448/tricky
+    - icon: fontawesome/brands/kaggle
+      link: https://www.kaggle.com/tricky35
+copyright: Copyright &copy; 2020 - Jérémy Le Gall
