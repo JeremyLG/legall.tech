@@ -17,7 +17,9 @@ jobs:
         with:
           python-version: "3.9"
       - name: Install Poetry
-        run: python3.9 -m pip install poetry
+        run: |
+          python3.9 -m pip install poetry
+          poetry config virtualenvs.create false
         # We should rather use this cmd:
         # curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
       - name: Install dependencies through Poetry
