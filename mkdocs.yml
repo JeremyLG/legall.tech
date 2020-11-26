@@ -1,5 +1,33 @@
-site_name: LeGall.tech
+site_name: LeGall
 site_description: My personal website
 site_url: https://legall.tech/
 theme:
   name: material
+  palette:
+  - scheme: default
+    primary: teal
+    accent: amber
+    toggle:
+      icon: material/lightbulb-outline
+      name: Switch to light mode
+  - scheme: slate
+    primary: teal
+    accent: amber
+    toggle:
+      icon: material/lightbulb
+      name: Switch to dark mode
+  features:
+  - search.suggest
+  - search.highlight
+  icon:
+    repo: fontawesome/brands/github-alt
+  logo: img/oss117-issou.png
+  favicon: img/favicon.ico
+  language: en
+repo_name: legall.tech
+repo_url: https://github.com/JeremyLG/legall.tech
+edit_uri: ''
+plugins:
+- search
+nav:
+- LeGall: index.md

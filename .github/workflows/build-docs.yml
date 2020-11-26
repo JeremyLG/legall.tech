@@ -16,13 +16,16 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: "3.9"
-      - name: Install Material for MkDocs
-        if: github.event.pull_request.head.repo.fork == false
-        run: pip install mkdocs-material
+      - name: Install Poetry
+        run: python3.9 -m pip install poetry
+        # We should rather use this cmd:
+        # curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
+      - name: Install dependencies through Poetry
+        run: poetry install --no-dev
       - name: Build Docs
-        run: python3.9 ./scripts/docs.py build-all
+        run: python3.9 -m mkdocs build
       - name: Zip docs
-        run: bash ./scripts/zip-docs.sh
+        run: bash ./scripts/zips-docs.sh
       - uses: actions/upload-artifact@v2
         with:
           name: docs-zip
