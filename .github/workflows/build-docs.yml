@@ -1,0 +1,39 @@
+name: Build Docs
+on:
+  push:
+  pull_request:
+    types: [opened, synchronize]
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.9"
+      - name: Install Material for MkDocs
+        if: github.event.pull_request.head.repo.fork == false
+        run: pip install mkdocs-material
+      - name: Build Docs
+        run: python3.9 ./scripts/docs.py build-all
+      - name: Zip docs
+        run: bash ./scripts/zip-docs.sh
+      - uses: actions/upload-artifact@v2
+        with:
+          name: docs-zip
+          path: ./docs.zip
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.1.5
+        with:
+          publish-dir: './site'
+          production-branch: master
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          enable-commit-comment: false
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

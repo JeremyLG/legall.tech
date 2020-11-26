@@ -1,0 +1,5 @@
+site_name: LeGall.tech
+site_description: My personal website
+site_url: https://legall.tech/
+theme:
+  name: material
