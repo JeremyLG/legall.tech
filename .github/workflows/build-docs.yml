@@ -1,6 +1,9 @@
 name: Build Docs
 on:
   push:
+    paths:
+    - 'docs'
+    - 'mkdocs.yml'
   pull_request:
     types: [opened, synchronize]
 jobs:
