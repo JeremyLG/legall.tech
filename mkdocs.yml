@@ -30,7 +30,7 @@ edit_uri: ''
 plugins:
 - search
 google_analytics:
-  - UA-254205131-X
+  - G-KKWXHTQ9XD
   - auto
 nav:
 - About myself: index.md
